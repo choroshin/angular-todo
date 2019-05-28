@@ -1,0 +1,9 @@
+<h2>Todo List</h2>
+<section class="todo-list">
+  <input type="text" [(ngModel)]="todoTitle">
+  <button (click)="create(todoTitle)">Add</button>
+  <div *ngFor="let todo of todos" [class.completed]="todo.isComplete">
+    <span>{{todo.title}}</span>
+    <button (click)="complete(todo)">complete</button>
+  </div>
+</section>
